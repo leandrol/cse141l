@@ -22,7 +22,7 @@ module ALU (
 	func = OPCODE[2:0];
 	
 	// OP code aliases to improve readability
-	parameter ADD = 3'010, MATCH = 3'b011, LT = 3'b100, DIST = 3'b101, HAS_FUNCA = 3'b110; HAS_FUNCB = 3'b111
+	parameter ADD = 3'b010, MATCH = 3'b011, LT = 3'b100, DIST = 3'b101, HAS_FUNCA = 3'b110; HAS_FUNCB = 3'b111
 	
 	// func code aliases for the 3'b110 op code to improve readability (A-type)
 	parameter LSL = 3'b000, LSR = 3'b001, INCR = 3'b010, AND1 = 3'b011, EQZ = 3'b100, ZERO = 3'b101, TBD = 3'b110, HALT = 3'b111;
