@@ -65,7 +65,7 @@ module ALU (
 		HAS_FUNCA: begin
 			case(func)
 			LSL: begin
-				// TODO: I think we epect the MSB of the shifted number to be shifted to the overflow bit
+				assign overflow = IN2[7];
 				assign result = IN2 << 1;
 			end
 			
