@@ -7,7 +7,7 @@ module regfile (
 	output reg [7:0] data1, data2
 	);
 	
-	logic [7:0] registers [0:7] = {8'b0, 8'b0, 8'b0, 8'b0, 8'b0, 8'b0, 8'b0, 8'b0};
+	logic [7:0] registers [0:7] = '{8'b0, 8'b0, 8'b0, 8'b0, 8'b0, 8'b0, 8'b0, 8'b0};
 	
 	always_ff @(posedge clk) begin
 		if(r_or_w == 0) begin
