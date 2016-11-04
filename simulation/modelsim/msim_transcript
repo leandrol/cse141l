@@ -12,41 +12,42 @@
 # 
 # vlog -sv -work work +incdir+C:/Users/Jux/Documents/CSE141L {C:/Users/Jux/Documents/CSE141L/regfile.sv}
 # Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
-# Start time: 23:34:27 on Nov 03,2016
+# Start time: 00:49:52 on Nov 04,2016
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Jux/Documents/CSE141L" C:/Users/Jux/Documents/CSE141L/regfile.sv 
 # -- Compiling module regfile
 # 
 # Top level modules:
 # 	regfile
-# End time: 23:34:27 on Nov 03,2016, Elapsed time: 0:00:00
+# End time: 00:49:52 on Nov 04,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 vlog -reportprogress 300 -work work C:/Users/Jux/Documents/CSE141L/tb_regfile.sv
 # Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
-# Start time: 23:34:59 on Nov 03,2016
+# Start time: 00:50:05 on Nov 04,2016
 # vlog -reportprogress 300 -work work C:/Users/Jux/Documents/CSE141L/tb_regfile.sv 
 # -- Compiling module tb_regfile
 # 
 # Top level modules:
 # 	tb_regfile
-# End time: 23:34:59 on Nov 03,2016, Elapsed time: 0:00:00
+# End time: 00:50:05 on Nov 04,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 vlog -reportprogress 300 -work work C:/Users/Jux/Documents/CSE141L/tb_regfile.sv
 # Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
-# Start time: 23:35:01 on Nov 03,2016
+# Start time: 00:50:06 on Nov 04,2016
 # vlog -reportprogress 300 -work work C:/Users/Jux/Documents/CSE141L/tb_regfile.sv 
 # -- Compiling module tb_regfile
 # 
 # Top level modules:
 # 	tb_regfile
-# End time: 23:35:01 on Nov 03,2016, Elapsed time: 0:00:00
+# End time: 00:50:06 on Nov 04,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 vsim work.tb_regfile
 # vsim work.tb_regfile 
-# Start time: 23:35:10 on Nov 03,2016
+# Start time: 00:50:08 on Nov 04,2016
 # Loading sv_std.std
 # Loading work.tb_regfile
 # Loading work.regfile
+add wave -position end  sim:/tb_regfile/clk
 add wave -position end  sim:/tb_regfile/r_addr1
 add wave -position end  sim:/tb_regfile/r_addr2
 add wave -position end  sim:/tb_regfile/w_addr
@@ -54,13 +55,4 @@ add wave -position end  sim:/tb_regfile/w_data
 add wave -position end  sim:/tb_regfile/r_or_w
 add wave -position end  sim:/tb_regfile/data1
 add wave -position end  sim:/tb_regfile/data2
-run -all
-add wave -position end  sim:/tb_regfile/clk
-# Break key hit
-# Simulation stop requested.
-restart -f
-restart -f
 run
-run
-# End time: 00:40:05 on Nov 04,2016, Elapsed time: 1:04:55
-# Errors: 0, Warnings: 0
