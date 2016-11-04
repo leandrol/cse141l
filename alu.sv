@@ -18,11 +18,11 @@ module ALU (
 	wire [2:0] func;
 	
 	// Op and func code assignments
-	op = OPCODE[5:3];
-	func = OPCODE[2:0];
+	assign op = OPCODE[5:3];
+	assign func = OPCODE[2:0];
 	
 	// OP code aliases to improve readability
-	parameter ADD = 3'b010, MATCH = 3'b011, LT = 3'b100, DIST = 3'b101, HAS_FUNCA = 3'b110; HAS_FUNCB = 3'b111
+	parameter ADD = 3'b010, MATCH = 3'b011, LT = 3'b100, DIST = 3'b101, HAS_FUNCA = 3'b110, HAS_FUNCB = 3'b111;
 	
 	// func code aliases for the 3'b110 op code to improve readability (A-type)
 	parameter LSL = 3'b000, LSR = 3'b001, INCR = 3'b010, AND1 = 3'b011, EQZ = 3'b100, ZERO = 3'b101, TBD = 3'b110, HALT = 3'b111;
@@ -54,7 +54,7 @@ module ALU (
 		
 		// Find distance between two numbers using signed subtraction and absolute value
 		DIST: begin
-			tempResult <= &signed(IN1) - &signed(IN2);
+			tempResult <= ($signed(IN1) - $signed(IN2));
 			
 			// Take absolute value (if sign bit is 1, we negate it to make it positive)
 			//	Conversion not neccessary cause verilog use's 2's compliment natively
@@ -93,6 +93,7 @@ module ALU (
 				// Set result to 0, assuming that the result is what the next value of the register is going to be.
 				result <= 0;
 			end
+			endcase
 		end
 		
 		// TODO: Does the branch arithmetic go here? Based on the write-up, the Instruction ROM (ie. part of the fetch unit)
@@ -100,7 +101,18 @@ module ALU (
 		
 		//B-type function bit overloads
 		HAS_FUNCB: begin
+			case(func)
+			BNO: begin
+				overflow <= 0;
+			end
+			
+			BOF: begin
+				overflow <= 1;
+			end
+			endcase
 		end
+		
+		endcase
 	end
 	
 endmodule
