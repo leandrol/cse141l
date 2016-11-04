@@ -9,26 +9,49 @@ z2
 cModel Technology
 Z0 dC:/Users/Jux/Documents/CSE141L/simulation/modelsim
 vregfile
-DXx6 sv_std 3 std 0 22 WmjPaeP=7F5?QFXzJ>D[Q2
-!s110 1478237831
+Z1 DXx6 sv_std 3 std 0 22 WmjPaeP=7F5?QFXzJ>D[Q2
+!s110 1478241267
 !i10b 1
 !s100 BDiGV7WRX:5dD;XF>O39C1
 I=aZ@k9gc9kDX^9G1__7=W1
-VDg1SIo80bB@j0V0VzS_@n1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
 !s105 regfile_sv_unit
 S1
 R0
-w1478237812
+w1478241110
 8C:/Users/Jux/Documents/CSE141L/regfile.sv
 FC:/Users/Jux/Documents/CSE141L/regfile.sv
 L0 2
-OV;L;10.4d;61
+Z3 OV;L;10.4d;61
 r1
 !s85 0
 31
-!s108 1478237831.000000
+!s108 1478241267.000000
 !s107 C:/Users/Jux/Documents/CSE141L/regfile.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Jux/Documents/CSE141L|C:/Users/Jux/Documents/CSE141L/regfile.sv|
 !i113 1
 o-sv -work work
 !s92 -sv -work work +incdir+C:/Users/Jux/Documents/CSE141L
+vtb_regfile
+R1
+!s110 1478241301
+!i10b 1
+!s100 90N>Tz:i3n6C73nmcEZ=T1
+IM0H:RHg]OR;LFVHY9=]:Z2
+R2
+!s105 tb_regfile_sv_unit
+S1
+R0
+w1478241225
+8C:/Users/Jux/Documents/CSE141L/tb_regfile.sv
+FC:/Users/Jux/Documents/CSE141L/tb_regfile.sv
+L0 2
+R3
+r1
+!s85 0
+31
+!s108 1478241301.000000
+!s107 C:/Users/Jux/Documents/CSE141L/tb_regfile.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/Jux/Documents/CSE141L/tb_regfile.sv|
+!i113 1
+o-work work

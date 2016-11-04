@@ -1,4 +1,5 @@
-module tb_regfile;
+`timescale 1ns/1ps
+module tb_regfile();
 
 	bit clk;
 	logic [2:0] r_addr1, r_addr2, w_addr;
