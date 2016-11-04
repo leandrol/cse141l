@@ -26,7 +26,7 @@ module fetch (
 		endcase
 		
 		case(wire_1)
-			1: wire_2 = offset;
+			1: wire_2 = instruction[4:0];
 			default: wire_2 = 8'b1;
 		endcase
 		
