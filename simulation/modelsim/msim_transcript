@@ -56,3 +56,5 @@ add wave -position end  sim:/tb_regfile/r_or_w
 add wave -position end  sim:/tb_regfile/data1
 add wave -position end  sim:/tb_regfile/data2
 run
+# End time: 01:18:23 on Nov 04,2016, Elapsed time: 0:28:15
+# Errors: 0, Warnings: 0
