@@ -1,7 +1,9 @@
 
 module fetch (
-	output [2:0] reg_addr1, reg_addr2,
-	output [5:0] OPCODE
+	input clk,
+	input [7:0] pc,
+	output [2:0] op,
+	output [5:0] fields
 	);
 	
 	
