@@ -1,10 +1,10 @@
 
 module fetch (
-	input clk,
-	input [7:0] pc,
-	output [2:0] op,
-	output [5:0] fields
+	input clock,
+	input [7:0] program_counter,
+	output [8:0] intruction
 	);
+	
 	
 	
 endmodule;
