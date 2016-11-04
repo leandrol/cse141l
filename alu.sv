@@ -3,8 +3,8 @@ module ALU (
 	input clk,
 	input [7:0] IN1, IN2,
 	input [5:0] OPCODE,
-	output reg [7:0] result,
-	output overflow
+	output logic [7:0] result,
+	output logic overflow
 	);
 	
 	// tempResult registers are used as an intermediate place holder
@@ -31,10 +31,10 @@ module ALU (
 	parameter BNO = 3'b000, BOF = 3'b001;
 	
 	// Always block since ALU needs to be sync'ed with clock
-	always @(posedge clk) begin
+	always_ff @(posedge clk) begin
 		case (op)
 		ADD: begin
-			tempResult_OF <= IN1 + IN2;
+			tempResult_OF = IN1 + IN2;
 			
 			// tempResult_OF is 9 bits wide, so overflow is the 9th bit while result is the other 8 bits
 			// TODO: Might need to add $signed because part-select in verilog turns number to unsigned
@@ -54,8 +54,7 @@ module ALU (
 		
 		// Find distance between two numbers using signed subtraction and absolute value
 		DIST: begin
-		
-			tempResult <= ($signed(IN1) - $signed(IN2));
+			tempResult = ($signed(IN1) - $signed(IN2));
 			
 			// Take absolute value (if sign bit is 1, we negate it to make it positive)
 			//	Conversion not neccessary cause verilog use's 2's compliment natively
