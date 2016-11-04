@@ -34,5 +34,4 @@ module fetch (
 		program_counter = wire_3;
 				
 	end
-	
 endmodule

@@ -54,6 +54,7 @@ module ALU (
 		
 		// Find distance between two numbers using signed subtraction and absolute value
 		DIST: begin
+		
 			tempResult <= ($signed(IN1) - $signed(IN2));
 			
 			// Take absolute value (if sign bit is 1, we negate it to make it positive)
