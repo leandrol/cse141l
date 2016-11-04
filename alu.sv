@@ -54,7 +54,8 @@ module ALU (
 		
 		// Find distance between two numbers using signed subtraction and absolute value
 		DIST: begin
-			tempResult <= $signed(IN1) - $signed(IN2);
+		
+			tempResult <= ($signed(IN1) - $signed(IN2));
 			
 			// Take absolute value (if sign bit is 1, we negate it to make it positive)
 			//	Conversion not neccessary cause verilog use's 2's compliment natively
@@ -93,7 +94,6 @@ module ALU (
 				// Set result to 0, assuming that the result is what the next value of the register is going to be.
 				result <= 0;
 			end
-			
 			endcase
 		end
 		
@@ -102,6 +102,15 @@ module ALU (
 		
 		//B-type function bit overloads
 		HAS_FUNCB: begin
+			case(func)
+			BNO: begin
+				overflow <= 0;
+			end
+			
+			BOF: begin
+				overflow <= 1;
+			end
+			endcase
 		end
 		
 		endcase
