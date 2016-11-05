@@ -1,4 +1,5 @@
 *.bak
 output_files/*
 db/*
-top.qws
+incremental_db/*
+simulation/*

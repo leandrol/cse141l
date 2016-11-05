@@ -22,4 +22,9 @@ module im_test_tb;
 		#25ns address = 28;
 	end
 	
+	always begin
+		#50ns clock = 1;
+		#50ns clock =0;
+	end
+	
 endmodule
