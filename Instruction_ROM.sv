@@ -1,3 +1,4 @@
+// This Instruction ROM contains temporary values and does not actually contain our programs.
 module im_test(
 	input        [6:0] address,
 	output logic [8:0] instruction
