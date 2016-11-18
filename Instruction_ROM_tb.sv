@@ -1,30 +1,33 @@
-module im_test_tb;
+`timescale 1ns/1ps
+
+module Instruction_ROM_tb;
+
+	parameter numInstr = 66;
 
 	// input
-	logic [4:0] address;
+	logic [6:0] address;
 	
 	// output
 	wire [8:0] instruction;
 	
 	// instantiate UUT
-	im_test uut (
-		.address,
-		.instruction
+	Instruction_ROM #(numInstr) uut (
+		.address(address),
+		.instruction(instruction)
 	);
 	
 	bit clock;
 	
 	initial begin
 		#100ns;
-		#25ns address = 4;
-		#25ns address = 17;
-		#25ns address = 12;
-		#25ns address = 28;
+		
+		for(address = 0; address < numInstr; address = address + 1 )
+			#50ns;
+		
 	end
 	
 	always begin
-		#50ns clock = 1;
-		#50ns clock =0;
+		#50ns clock = ~clock;
 	end
 	
 endmodule
