@@ -39,7 +39,7 @@
 
 set_global_assignment -name FAMILY "Cyclone IV E"
 set_global_assignment -name DEVICE EP4CE40F29C6
-set_global_assignment -name TOP_LEVEL_ENTITY fetch
+set_global_assignment -name TOP_LEVEL_ENTITY Instruction_ROM
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 16.0.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "16:18:54  NOVEMBER 01, 2016"
 set_global_assignment -name LAST_QUARTUS_VERSION 16.0.0
@@ -51,13 +51,13 @@ set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
 set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (SystemVerilog)"
 set_global_assignment -name EDA_TIME_SCALE "1 ns" -section_id eda_simulation
 set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "SYSTEMVERILOG HDL" -section_id eda_simulation
-set_global_assignment -name SYSTEMVERILOG_FILE regfile.sv
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name SYSTEMVERILOG_FILE Instruction_ROM_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE Instruction_ROM.sv
+set_global_assignment -name SYSTEMVERILOG_FILE regfile.sv
 set_global_assignment -name SYSTEMVERILOG_FILE tb_regfile.sv
 set_global_assignment -name SYSTEMVERILOG_FILE fetch_tb.sv
-set_global_assignment -name SYSTEMVERILOG_FILE im_test.sv
-set_global_assignment -name SYSTEMVERILOG_FILE im_test_tb.sv
 set_global_assignment -name SYSTEMVERILOG_FILE alu.sv
 set_global_assignment -name SYSTEMVERILOG_FILE alu_tb.sv
 set_global_assignment -name SYSTEMVERILOG_FILE fetch.sv

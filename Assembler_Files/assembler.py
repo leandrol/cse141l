@@ -59,7 +59,7 @@ def processBranchInstruction( tokens, currCount ):
         branchMap[tokens[0][:tokens[0].index(':')]] = currCount
         #valid branch instruction
         return 1
-    elif( len(tokens) in range(2, 4) ):
+    elif( len(tokens) in range(2, 4) or (len(tokens) == 1 and tokens[0] == 'halt') ):
         #valid non-branch instruction
         return 0
     else:
@@ -135,6 +135,7 @@ for l in instrFile:
     tokens = extractTokens(l)
     if( processBranchInstruction(tokens, instrCount) == 0 ):
         instrCount += 1
+
 print("Finished extracting branch labels")
 print("Found", len(branchMap), "labels")
 
@@ -146,12 +147,14 @@ except:
     exit()
 
 #write header of .mif file
+"""
 binFile.write("DEPTH = " + str(instrCount) + ';\n')
 binFile.write("WIDTH = 9;\n")
 binFile.write("ADDRESS_RADIX = DEC;\n")
 binFile.write("DATA_RADIX = BIN;\n")
 binFile.write("CONTENT\n")
 binFile.write("BEGIN\n")
+"""
 
 instrCount = 0
 instrFile.seek(0,0)
@@ -166,10 +169,10 @@ for l in instrFile:
                 print('binLine is not 9 bits')
                 exit()
                 
-            binFile.write(str(instrCount) + ' : ' + binLine + '\n')
+            binFile.write(binLine + '\n')
             instrCount += 1
 #end of file
-binFile.write("END;")
+#binFile.write("END;")
 
 #close files
 instrFile.close()
