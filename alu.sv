@@ -15,11 +15,13 @@ module ALU (
 	
 	// Op and func codes to split the input OPCODE
 	wire [2:0] op;
-	wire [2:0] func;
+	wire [2:0] funcA;
+	wire funcB;
 	
 	// Op and func code assignments
 	assign op = OPCODE[5:3];
-	assign func = OPCODE[2:0];
+	assign funcA = OPCODE[2:0];
+	assign funcB = OPCODE[2];
 	
 	// OP code aliases to improve readability
 	parameter ADD = 3'b010, MATCH = 3'b011, LT = 3'b100, DIST = 3'b101, HAS_FUNCA = 3'b110, HAS_FUNCB = 3'b111;
@@ -28,7 +30,7 @@ module ALU (
 	parameter LSL = 3'b000, LSR = 3'b001, INCR = 3'b010, AND1 = 3'b011, EQZ = 3'b100, ZERO = 3'b101, TBD = 3'b110, HALT = 3'b111;
 	
 	// func codes aliases for the 3'b111 op code to improve readability (B-type)
-	parameter BNO = 3'b000, BOF = 3'b001;
+	parameter BNO = 0, BOF = 1;
 	
 	// Always block since ALU needs to be sync'ed with clock
 	always_ff @(posedge clk) begin
@@ -63,7 +65,7 @@ module ALU (
 		
 		//A-type function bit overloads
 		HAS_FUNCA: begin
-			case(func)
+			case(funcA)
 			LSL: begin
 				overflow <= IN2[7];
 				result <= IN2 << 1;
@@ -101,7 +103,7 @@ module ALU (
 		
 		//B-type function bit overloads
 		HAS_FUNCB: begin
-			case(func)
+			case(funcB)
 			BNO: begin
 				overflow <= 0;
 			end

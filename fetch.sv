@@ -12,7 +12,7 @@ module fetch (
 	input               taken,
 	input  signed [4:0] offset,			// target
 	input               clock,
-	output logic  [8:0] instruction
+	output logic  [6:0] instruction
 );
 	
 	logic        [6:0] pc_to_im;			// program counter to instruction memory
@@ -20,12 +20,8 @@ module fetch (
 	logic        [6:0] next;				// next instruction address
 	
 	logic [6:0] program_counter;
-	im_test instruction_memory (
-		pc_to_im,
-		instruction
-	);
 	
-	assign pc_to_im = program_counter;
+	assign instruction = program_counter;
 	assign signed_address = program_counter;
 	
 	// next instruction logic
