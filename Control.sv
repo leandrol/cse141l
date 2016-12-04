@@ -5,7 +5,8 @@ module Control(
 	output logic writeMem,
 	output logic readOrWriteReg,			// readReg = 0, writeReg = 1
 	output logic branch,
-	output logic taken
+	output logic taken,
+	output logic halt
 );
 	assign op = opcode[5:3];
 	// function code for A type instructions
@@ -30,6 +31,7 @@ module Control(
 			readOrWriteReg = 1;
 			branch = 0;
 			taken = 0;
+			halt = 0;
 		end
 		
 		STORE: begin
@@ -38,6 +40,7 @@ module Control(
 			readOrWriteReg = 0;
 			branch = 0;
 			taken = 0;
+			halt = 0;
 		end
 		
 		ADD: begin
@@ -46,6 +49,7 @@ module Control(
 			readOrWriteReg = 0;
 			branch = 0;
 			taken = 0;
+			halt = 0;
 		end
 		
 		MATCH: begin
@@ -54,6 +58,7 @@ module Control(
 			readOrWriteReg = 0;
 			branch = 0;
 			taken = 0;
+			halt = 0;
 		end
 		
 		LT: begin
@@ -62,6 +67,7 @@ module Control(
 			readOrWriteReg = 0;
 			branch = 0;
 			taken = 0;
+			halt = 0;
 		end
 		
 		DIST: begin
@@ -70,6 +76,7 @@ module Control(
 			readOrWriteReg = 0;
 			branch = 0;
 			taken = 0;
+			halt = 0;
 		end
 		
 		//A-type function bit overloads
@@ -81,6 +88,7 @@ module Control(
 				readOrWriteReg = 0;
 				branch = 0;
 				taken = 0;
+				halt = 0;
 			end
 			
 			LSR: begin
@@ -89,6 +97,7 @@ module Control(
 				readOrWriteReg = 0;
 				branch = 0;
 				taken = 0;
+				halt = 0;
 			end
 			
 			INCR: begin
@@ -97,6 +106,7 @@ module Control(
 				readOrWriteReg = 0;
 				branch = 0;
 				taken = 0;
+				halt = 0;
 			end
 			
 			AND1: begin
@@ -105,6 +115,7 @@ module Control(
 				readOrWriteReg = 0;
 				branch = 0;
 				taken = 0;
+				halt = 0;
 			end
 			
 			EQZ: begin
@@ -121,6 +132,16 @@ module Control(
 				readOrWriteReg = 1;
 				branch = 0;
 				taken = 0;
+				halt = 0;
+			end
+			
+			HALT: begin
+				readMem = 0;
+				writeMem = 0;
+				readOrWriteReg = 0;
+				branch = 0;
+				taken = 0;
+				halt = 1;
 			end
 			endcase
 		end
@@ -135,6 +156,7 @@ module Control(
 					readOrWriteReg = 0;
 					branch = 1;
 					taken = 1;
+					halt = 0;
 				end
 				else begin
 					readMem = 0;
@@ -142,6 +164,7 @@ module Control(
 					readOrWriteReg = 0;
 					branch = 0;
 					taken = 0;
+					halt = 0;
 				end
 			end
 			
@@ -152,6 +175,7 @@ module Control(
 					readOrWriteReg = 0;
 					branch = 1;
 					taken = 1;
+					halt = 0;
 				end
 				else begin
 					readMem = 0;
@@ -159,6 +183,7 @@ module Control(
 					readOrWriteReg = 0;
 					branch = 0;
 					taken = 0;
+					halt = 0;
 				end
 			end
 			endcase

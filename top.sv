@@ -1,14 +1,15 @@
 module top(
 	input start,
+	input [6:0] start_address,
 	input CLK,
-	output halt
+	output done
 	);
 	
 	// Inputs and outputs for fetch module
-	wire [7:0] startAddress = 8'b0;
 	wire [6:0] PC;
 	wire Branch;
 	wire Taken;
+	wire Halt;
 	
 	// Instruction bits
 	wire [8:0] Instruction;
@@ -30,11 +31,12 @@ module top(
 	
 	fetch fetch_module (
 		.start (start),
-		.start_address (startAddress),
+		.start_address (start_address),
 		.branch (Branch),
 		.taken (Taken),
 		.offset (Instruction[4:0]),
 		.clock (CLK),
+		.halt (Halt),
 		.instruction (PC)
 	);
 	
@@ -50,7 +52,8 @@ module top(
 		.writeMem (WriteMem),
 		.readOrWriteReg (RorW),
 		.branch (Branch),
-		.taken (Taken)
+		.taken (Taken),
+		.halt (Halt)
 	);
 	
 	DataRAM memory_module(
@@ -81,5 +84,7 @@ module top(
 		.result (writeData),
 		.overflow (Overflow)
 	);
+	
+	assign done = Halt;
 	
 endmodule

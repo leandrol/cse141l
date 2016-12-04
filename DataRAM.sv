@@ -1,6 +1,6 @@
 module DataRAM(
 	input clk,
-	input address,
+	input [7:0] address,
 	input readMem,
 	input writeMem,
 	input [7:0] dataIn,

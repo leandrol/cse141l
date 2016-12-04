@@ -12,6 +12,7 @@ module fetch (
 	input               taken,
 	input  signed [4:0] offset,			// target
 	input               clock,
+	input					  halt,
 	output logic  [6:0] instruction
 );
 	
@@ -31,6 +32,9 @@ module fetch (
 		end
 		else if ((branch == 1) && (taken == 1)) begin
 			next = signed_address + offset;
+		end
+		else if (halt == 1) begin
+			next = program_counter;
 		end
 		else begin
 			next = program_counter + 1;
