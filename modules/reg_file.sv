@@ -37,6 +37,16 @@ module reg_file (
 					$readmemb("product.rf", registers);
 				end
 				
+				// string match
+				7'b0100010 : begin
+					$readmemb("string_match.rf", registers);
+				end
+				
+				// closest pair
+				7'b0110010 : begin
+					$readmemb("closest_pair.rf", registers);
+				end
+				
 				default: begin
 					registers = '{8'b0, 8'b0, 8'b0, 8'b0, 8'b0, 8'b0, 8'b0, 8'b0};
 				end

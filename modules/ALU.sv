@@ -60,13 +60,13 @@ module ALU (
 		// match
 		else if (opcode == MATCH) begin
 			result = 8'bz;
-			temp[8] = (in1 == in2);
+			temp[8] = (in1[3:0] == in2[3:0]);
 		end
 		
 		// less than
 		else if (opcode == LT) begin
 			result = 8'bz;
-			temp[8] = ($signed(in1) < $signed(in2));
+			temp[8] = in1 < in2;
 		end
 		
 		// distance

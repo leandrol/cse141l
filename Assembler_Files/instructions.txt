@@ -60,23 +60,23 @@ if4:
 
 ;STRING MATCH
 	;LOAD VALUES OF OPERANDS
-	load $r1, $r1	; load pattern from memory
+	load $r1, $r1		; load pattern from memory
 
 
 	;OUTER LOOP THROUGH ALL INPUT BYTE STRINGS
 	s_while1:
-	load $r0, $r6	; load first byte string from memory
+	load $r0, $r6		; load first byte string from memory
 
 
 	;INNER LOOP THROUGH EVERY 4 BIT COMBO IN EACH STRING
 	s_while2:
-	match $r0, $r1	; check if lower 4 bits of string match pattern
+	match $r0, $r1		; check if lower 4 bits of string match pattern
 	bof s_if1		; if pattern match, branch
-	lsr $r0		; if no match, s >> 1
-	incr $r5		; increment inner loop index, j, by 1
-	lt $r4, $r5	; check inner while condition (j < length)
+	lsr $r0			; if no match, s >> 1
+	incr $r4		; increment inner loop index, j, by 1
+	lt $r4, $r5		; check inner while condition (j < length)
 	bno s_if2		; exit loop
-	bof while2		; if (j < length) is true, loop inner
+	bof s_while2		; if (j < length) is true, loop inner
 
 
 	s_if1:
@@ -84,8 +84,9 @@ if4:
 
 
 	s_if2:
+	zero $r4
 	incr $r6		; increment outer loop index, i, by 1
- 	lt $r6, $r7	; check outer while condition (i < size)
+ 	lt $r6, $r7		; check outer while condition (i < size)
 	bof s_while1		; if (i < size) is true, loop outer
 
 	store $r2, $r3	; store the count to memory
@@ -94,31 +95,31 @@ if4:
 ; CLOSEST PAIR
 	; OUTER LOOP THROUGH EVERY VALUE IN ARRAY TO COMPARE
 	c_while1:
-	load $r0, $r2	; x = array[i]
+	load $r0, $r2		; x = array[i]
 	incr $r2		; i++
 	zero $r4		; j = 0
-	add $r4, $r2	; j += i (so that j = i)
+	add $r4, $r2		; j += i (so that j = i)
 
 
 	;INNER LOOP THROUGH EVERY OTHER VALUE IN ARRAY TO COMPARE TO
 	c_while2:
-	load $r1, $r4	; y = array[j]
+	load $r1, $r4		; y = array[j]
 	incr $r4		; j++
-	dist $r1, $r0	; calculate dist, overwrite y
-	lt $r1, $r6	; check if dist < min
+	dist $r1, $r0		; calculate dist, overwrite y
+	lt $r1, $r6		; check if dist < min
 	bno c_if1		; if dist >= min, skip min update
 	zero $r6		; min = 0
-	add $r6, $r1	; min += dist
+	add $r6, $r1		; min += dist
 
 
 	c_if1:
-	lt $r4, $r5	; check if j < 20
+	lt $r4, $r5		; check if j < 20
 	bof c_while2		; if j < 20 is true, then loop inner
 
 
-	lt $r2, $r3	; check if i < 19
+	lt $r2, $r3		; check if i < 19
 	bof c_while1		; if i < 19 is true, then loop outer
 
 
-	store $r6, $r7	; store min in result address
+	store $r6, $r7		; store min in result address
 	halt

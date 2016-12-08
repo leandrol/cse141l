@@ -1,16 +1,15 @@
 ////////////////////////////
 //                        //
 // First Uber Cool Design //
-//        Product         //
+//      String Match      //
 //                        //
 ////////////////////////////
 
 // default.mem
-// inputs: 53, 17, 42
-// expected output: 37842 (147, 210)
+// expected output: 19
 // ** these are decimal representations
 
-module top_tb_product;
+module top_tb_string_match;
 	
 	// inputs
 	logic 		start;
@@ -31,7 +30,7 @@ module top_tb_product;
 	initial begin
 		#100ns;
 		start = 1;
-		start_address = 7'b0;
+		start_address = 7'b0100010;
 		#15ns start = 0;
 	end
 	
