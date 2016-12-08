@@ -5,6 +5,11 @@
 //                        //
 ////////////////////////////
 
+// default.mem
+// inputs: 53, 17, 42
+// expected output: 37842 (147, 210)
+// ** these are decimal representations
+
 module top_tb_product;
 	
 	// inputs
