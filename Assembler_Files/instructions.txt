@@ -8,50 +8,50 @@
 while1:
 	and $r4			; $overflow = B & 1
 	bno if1			; branch if LSB of B is 0
+	add $r0, $r2		; add upper bits
 	add $r1, $r3		; add lower bits
 	bno if1			; branch if no overflow
-	incr $r0			; increment upper bits
-	add $r0, $r2		; add upper bits
+	incr $r0		; increment upper bits
 
 
 if1:
 	lsl $r2			; shift upper bits of A left
 	lsl $r3			; shift lower bits of A left
 	bno if2			; skip if MSB lower bit is 0
-	incr $r2			; add overflow to upper bits of A
+	incr $r2		; add overflow to upper bits of A
 
 
 if2:
 	lsr $r4			; shift B right
 	eqz $r4			; overflow = (B == 0)
-	bno while1			; loop while B != 0
+	bno while1		; loop while B != 0
 
 
 # MULTIPLY AB AND C
-	zero $r2			; initialize $r2 to 0
-	zero $r3			; initialize $r3 to 0
+	zero $r2		; initialize $r2 to 0
+	zero $r3		; initialize $r3 to 0
 
 
 while2:
 	and $r5			; $overflow = C & 1
 	bno if3			; branch if LSB of C is 0
+	add $r2, $r0		; add upper bits
 	add $r3, $r1		; add lower bits
 	bno if3			; branch if no overflow
-	incr $r2			; increment upper bits
-	add $r2, $r0		; add upper bits
+	incr $r2		; increment upper bits
 
 
 if3:
 	lsl $r0			; shift upper bits of AB left
 	lsl $r1			; shift lower bits of AB left
 	bno if4			; skip if MSB lower bit was 0
-	incr $r0			; add overflow to upper bits of AB
+	incr $r0		; add overflow to upper bits of AB
 
 
 if4:
 	lsr $r5			; shift C right
 	eqz $r5			; overflow = (C == 0)
-	bno while2			; loop while C != 0
+	bno while2		; loop while C != 0
 
 
 	store $r2, $r6		; store upper bits in memory

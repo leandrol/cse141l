@@ -1,90 +1,123 @@
-module top(
+////////////////////////////
+//                        //
+// First Uber Cool Design //
+//       Processor        //
+//                        //
+////////////////////////////
+
+module top (
 	input start,
 	input [6:0] start_address,
-	input CLK,
-	output done
+	input clock,
+	output logic done
 	);
 	
-	// Inputs and outputs for fetch module
-	wire [6:0] PC;
-	wire Branch;
-	wire Taken;
-	wire Halt;
+	// START WIRES
 	
-	// Instruction bits
-	wire [8:0] Instruction;
+	logic [6:0] next;
+	logic [6:0] current;
+	logic [8:0] instruction;
+	logic [7:0] regData1;
+	logic [7:0] regData2;
+	logic [7:0] aluData;
+	logic			overflow;
+	logic [7:0] memData;
+	logic [7:0] writeData;
+	logic 		branch;
+	logic 		taken;
+	logic 		halt;
+	logic 		regWrite;
+	logic			regDest;
+	logic 		memRead;
+	logic 		memWrite;
+	logic 		memToReg;
 	
-	// Inputs and outputs for data module
-	wire ReadMem;
-	wire WriteMem;
-	wire [7:0] memAddress;
+	// END WIRES
 	
-	// Input and Outputs for register file
-	wire RorW;
-	wire [7:0] Data1;				// Data from first register operand
-	wire [7:0] Data2;				// Data from second register operand
-	wire [7:0] writeData;		// Data written to register. Used by ALU for result and
-										// by DataRam as dataOut
+	// START MODULES
 	
-	// Inputs and outputs for ALU
-	wire Overflow;
-	
-	fetch fetch_module (
-		.start (start),
-		.start_address (start_address),
-		.branch (Branch),
-		.taken (Taken),
-		.offset (Instruction[4:0]),
-		.clock (CLK),
-		.halt (Halt),
-		.instruction (PC)
+	PC program_counter (
+		clock,
+		next,
+		current
 	);
 	
-	Instruction_ROM inst_module(
-		.address (PC),
-		.instruction (Instruction)
+	fetch fetch_unit (
+		start,
+		start_address,
+		branch,
+		taken,
+		instruction[4:0],
+		halt,
+		current,
+		next
 	);
 	
-	Control control_module(
-		.opcode (Instruction[8:3]),
-		.overflow (Overflow),
-		.readMem (ReadMem),
-		.writeMem (WriteMem),
-		.readOrWriteReg (RorW),
-		.branch (Branch),
-		.taken (Taken),
-		.halt (Halt)
+	instruction_ROM instr_mem (
+		current,
+		instruction
 	);
 	
-	DataRAM memory_module(
-		.clk (CLK),
-		.address (Data2),
-		.readMem (ReadMem),
-		.writeMem (WriteMem),
-		.dataIn (Data1),
-		.dataOut (writeData)
+	reg_file register_file (
+		start,
+		start_address,
+		clock,
+		regWrite,
+		regDest,
+		instruction[5:3],
+		instruction[2:0],
+		writeData,
+		regData1,
+		regData2
 	);
 	
-	regfile register_module(
-		.clk (CLK),
-		.r_addr1 (Instruction[5:3]),
-		.r_addr2 (Instruction[2:0]),
-		.w_addr (Instruction[5:3]),
-		.w_data (writeData),
-		.r_or_w (RorW),
-		.data1 (Data1),
-		.data2 (Data2)
+	ALU alu (
+		clock,
+		instruction[8:6],
+		instruction[5:3],
+		instruction[5],
+		regData1,
+		regData2,
+		aluData,
+		overflow
 	);
 	
-	ALU alu_module(
-		.clk (CLK),
-		.IN1 (Data1),
-		.IN2 (Data2),
-		.OPCODE (Instruction[8:3]),
-		.result (writeData),
-		.overflow (Overflow)
+	data_memory data_mem (
+		start,
+		clock,
+		memRead,
+		memWrite,
+		regData2,
+		regData1,
+		memData
 	);
 	
-	assign done = Halt;
+	WriteDataSwitch data_switch (
+		memToReg,
+		aluData,
+		memData,
+		writeData
+	);
+	
+	Control control (
+		instruction[8:6],
+		instruction[5:3],
+		instruction[5],
+		overflow,
+		branch,
+		taken,
+		halt,
+		regWrite,
+		regDest,
+		memRead,
+		memWrite,
+		memToReg
+	);
+	
+	// END MODULES
+	
+	always_comb begin
+		done = halt;
+	end
 	
 endmodule

@@ -8,12 +8,12 @@
 module top_tb_product;
 	
 	// inputs
-	bit 			start;
+	logic 		start;
 	logic [6:0] start_address;
-	bit 			clock;
+	logic 		clock;
 	
 	// output
-	wire done;
+	logic done;
 	
 	// instantiate unit under test
 	top uut (
@@ -27,12 +27,12 @@ module top_tb_product;
 		#100ns;
 		start = 1;
 		start_address = 9'b000000000;
-		#10ns start = 0;
+		#15ns start = 0;
 	end
 	
 	always begin
-		#5ns clock = 1;
-		#5ns clock = 0;
+		#10ns clock = 1;
+		#10ns clock = 0;
 	end
 	
 endmodule
