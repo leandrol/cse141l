@@ -1,0 +1,291 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/chaos_000/Dropbox/CSE141L/cse141l/simulation/modelsim
+vALU
+Z1 DXx6 sv_std 3 std 0 22 WmjPaeP=7F5?QFXzJ>D[Q2
+Z2 !s110 1481326657
+!i10b 1
+!s100 JJhVo7KFe09LAh0:@cQ4Z3
+Id>Q268E>BGPC<gdOfil1I2
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+!s105 ALU_sv_unit
+S1
+R0
+Z4 w1481271211
+8C:/Users/chaos_000/Dropbox/CSE141L/cse141l/modules/ALU.sv
+FC:/Users/chaos_000/Dropbox/CSE141L/cse141l/modules/ALU.sv
+L0 8
+Z5 OV;L;10.4b;61
+r1
+!s85 0
+31
+Z6 !s108 1481326657.000000
+!s107 C:/Users/chaos_000/Dropbox/CSE141L/cse141l/modules/ALU.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/chaos_000/Dropbox/CSE141L/cse141l/modules/ALU.sv|
+!i113 1
+Z7 o-work work
+n@a@l@u
+vControl
+R1
+R2
+!i10b 1
+!s100 2lSDXfSETEdPbE4E?JF;j0
+I:lM>7@72]B[aP>jI<ig]c1
+R3
+!s105 control_sv_unit
+S1
+R0
+R4
+8C:/Users/chaos_000/Dropbox/CSE141L/cse141l/modules/control.sv
+FC:/Users/chaos_000/Dropbox/CSE141L/cse141l/modules/control.sv
+L0 8
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/chaos_000/Dropbox/CSE141L/cse141l/modules/control.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/chaos_000/Dropbox/CSE141L/cse141l/modules/control.sv|
+!i113 1
+R7
+n@control
+vdata_memory
+R1
+!s110 1481326994
+!i10b 1
+!s100 TMj]LEmEU[b`1gN5T1H@42
+IBlZ1SRTRkKf^iY6i:@j0g3
+R3
+!s105 data_memory_sv_unit
+S1
+R0
+R4
+8C:/Users/chaos_000/Dropbox/CSE141L/cse141l/modules/data_memory.sv
+FC:/Users/chaos_000/Dropbox/CSE141L/cse141l/modules/data_memory.sv
+L0 8
+R5
+r1
+!s85 0
+31
+!s108 1481326994.000000
+!s107 C:/Users/chaos_000/Dropbox/CSE141L/cse141l/modules/data_memory.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/chaos_000/Dropbox/CSE141L/cse141l/modules/data_memory.sv|
+!i113 1
+R7
+vfetch
+R1
+R2
+!i10b 1
+!s100 8ijmo9HX<[aI<lc1W2aIj3
+IG?eIciPii>hk=^L=Vk>2?2
+R3
+!s105 fetch_sv_unit
+S1
+R0
+R4
+8C:/Users/chaos_000/Dropbox/CSE141L/cse141l/modules/fetch.sv
+FC:/Users/chaos_000/Dropbox/CSE141L/cse141l/modules/fetch.sv
+L0 8
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/chaos_000/Dropbox/CSE141L/cse141l/modules/fetch.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/chaos_000/Dropbox/CSE141L/cse141l/modules/fetch.sv|
+!i113 1
+R7
+vinstruction_ROM
+R1
+Z8 !s110 1481326658
+!i10b 1
+!s100 DzUc[BePnfTUeBgWR>A803
+I;VSOe[eVU^^3<fjjO;RV31
+R3
+!s105 instruction_ROM_sv_unit
+S1
+R0
+R4
+8C:/Users/chaos_000/Dropbox/CSE141L/cse141l/modules/instruction_ROM.sv
+FC:/Users/chaos_000/Dropbox/CSE141L/cse141l/modules/instruction_ROM.sv
+L0 8
+R5
+r1
+!s85 0
+31
+Z9 !s108 1481326658.000000
+!s107 C:/Users/chaos_000/Dropbox/CSE141L/cse141l/modules/instruction_ROM.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/chaos_000/Dropbox/CSE141L/cse141l/modules/instruction_ROM.sv|
+!i113 1
+R7
+ninstruction_@r@o@m
+vPC
+R1
+R8
+!i10b 1
+!s100 GZH4aboIdEj_JdL?zc?P;2
+I4k;fB_1K`lHSAa1Ni=DL90
+R3
+!s105 PC_sv_unit
+S1
+R0
+R4
+8C:/Users/chaos_000/Dropbox/CSE141L/cse141l/modules/PC.sv
+FC:/Users/chaos_000/Dropbox/CSE141L/cse141l/modules/PC.sv
+L0 8
+R5
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/chaos_000/Dropbox/CSE141L/cse141l/modules/PC.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/chaos_000/Dropbox/CSE141L/cse141l/modules/PC.sv|
+!i113 1
+R7
+n@p@c
+vreg_file
+R1
+R8
+!i10b 1
+!s100 ;m39Pz5;B[z8Ef^Weg1l72
+IZJeGWEJSCzXM6mj3@Yobz0
+R3
+!s105 reg_file_sv_unit
+S1
+R0
+R4
+8C:/Users/chaos_000/Dropbox/CSE141L/cse141l/modules/reg_file.sv
+FC:/Users/chaos_000/Dropbox/CSE141L/cse141l/modules/reg_file.sv
+L0 8
+R5
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/chaos_000/Dropbox/CSE141L/cse141l/modules/reg_file.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/chaos_000/Dropbox/CSE141L/cse141l/modules/reg_file.sv|
+!i113 1
+R7
+vtop
+R1
+!s110 1481326660
+!i10b 1
+!s100 1WENM<U3aR`OcUV5V1bzz2
+Ij9_]4QG5ggzciY4@XcR=61
+R3
+!s105 top_sv_unit
+S1
+R0
+R4
+8C:/Users/chaos_000/Dropbox/CSE141L/cse141l/top.sv
+FC:/Users/chaos_000/Dropbox/CSE141L/cse141l/top.sv
+L0 8
+R5
+r1
+!s85 0
+31
+!s108 1481326660.000000
+!s107 C:/Users/chaos_000/Dropbox/CSE141L/cse141l/top.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/chaos_000/Dropbox/CSE141L/cse141l/top.sv|
+!i113 1
+R7
+vtop_tb_closest_pair
+R1
+!s110 1481326663
+!i10b 1
+!s100 4@JfJ]z8cW6K:mS06Phk<3
+Iz0`deIbiZ@PiDOfolfQD[1
+R3
+!s105 closest_pair_sv_unit
+S1
+R0
+R4
+8C:/Users/chaos_000/Dropbox/CSE141L/cse141l/programs/closest_pair.sv
+FC:/Users/chaos_000/Dropbox/CSE141L/cse141l/programs/closest_pair.sv
+Z10 L0 12
+R5
+r1
+!s85 0
+31
+!s108 1481326663.000000
+!s107 C:/Users/chaos_000/Dropbox/CSE141L/cse141l/programs/closest_pair.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/chaos_000/Dropbox/CSE141L/cse141l/programs/closest_pair.sv|
+!i113 1
+R7
+vtop_tb_product
+R1
+Z11 !s110 1481333161
+!i10b 1
+!s100 ;:_eSd;PXYVGNKGKO^ReJ1
+Ii?3YEo]`_GkVkN85UR^If3
+R3
+!s105 product_sv_unit
+S1
+R0
+R4
+8C:/Users/chaos_000/Dropbox/CSE141L/cse141l/programs/product.sv
+FC:/Users/chaos_000/Dropbox/CSE141L/cse141l/programs/product.sv
+L0 13
+R5
+r1
+!s85 0
+31
+Z12 !s108 1481333161.000000
+!s107 C:/Users/chaos_000/Dropbox/CSE141L/cse141l/programs/product.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/chaos_000/Dropbox/CSE141L/cse141l/programs/product.sv|
+!i113 1
+R7
+vtop_tb_string_match
+R1
+R11
+!i10b 1
+!s100 6_cHfN<Y5fleUMRBE9HOz3
+IT[hSAN1H^WbLXEH0PFQOZ3
+R3
+!s105 string_match_sv_unit
+S1
+R0
+R4
+8C:/Users/chaos_000/Dropbox/CSE141L/cse141l/programs/string_match.sv
+FC:/Users/chaos_000/Dropbox/CSE141L/cse141l/programs/string_match.sv
+R10
+R5
+r1
+!s85 0
+31
+R12
+!s107 C:/Users/chaos_000/Dropbox/CSE141L/cse141l/programs/string_match.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/chaos_000/Dropbox/CSE141L/cse141l/programs/string_match.sv|
+!i113 1
+R7
+vWriteDataSwitch
+R1
+R8
+!i10b 1
+!s100 1n8^lUJA2bFoik;BbYhYi3
+INQdCf:BN]Ldjm4mb4WUjI0
+R3
+!s105 write_data_switch_sv_unit
+S1
+R0
+R4
+8C:/Users/chaos_000/Dropbox/CSE141L/cse141l/modules/write_data_switch.sv
+FC:/Users/chaos_000/Dropbox/CSE141L/cse141l/modules/write_data_switch.sv
+L0 8
+R5
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/chaos_000/Dropbox/CSE141L/cse141l/modules/write_data_switch.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/chaos_000/Dropbox/CSE141L/cse141l/modules/write_data_switch.sv|
+!i113 1
+R7
+n@write@data@switch

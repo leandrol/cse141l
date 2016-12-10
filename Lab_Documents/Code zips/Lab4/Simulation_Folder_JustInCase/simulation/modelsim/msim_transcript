@@ -1,0 +1,364 @@
+# do top_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim ALTERA vmap 10.4b Lib Mapping Utility 2015.05 May 27 2015
+# vmap -modelsim_quiet work rtl_work 
+# Copying C:/altera/15.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:/altera/15.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -sv -work work +incdir+C:/Users/chaos_000/Dropbox/CSE141L/cse141l {C:/Users/chaos_000/Dropbox/CSE141L/cse141l/top.sv}
+# Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+# Start time: 15:36:51 on Dec 09,2016
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/chaos_000/Dropbox/CSE141L/cse141l" C:/Users/chaos_000/Dropbox/CSE141L/cse141l/top.sv 
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# End time: 15:36:51 on Dec 09,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/chaos_000/Dropbox/CSE141L/cse141l/modules {C:/Users/chaos_000/Dropbox/CSE141L/cse141l/modules/PC.sv}
+# Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+# Start time: 15:36:51 on Dec 09,2016
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/chaos_000/Dropbox/CSE141L/cse141l/modules" C:/Users/chaos_000/Dropbox/CSE141L/cse141l/modules/PC.sv 
+# -- Compiling module PC
+# 
+# Top level modules:
+# 	PC
+# End time: 15:36:51 on Dec 09,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/chaos_000/Dropbox/CSE141L/cse141l/modules {C:/Users/chaos_000/Dropbox/CSE141L/cse141l/modules/fetch.sv}
+# Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+# Start time: 15:36:51 on Dec 09,2016
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/chaos_000/Dropbox/CSE141L/cse141l/modules" C:/Users/chaos_000/Dropbox/CSE141L/cse141l/modules/fetch.sv 
+# -- Compiling module fetch
+# 
+# Top level modules:
+# 	fetch
+# End time: 15:36:51 on Dec 09,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/chaos_000/Dropbox/CSE141L/cse141l/modules {C:/Users/chaos_000/Dropbox/CSE141L/cse141l/modules/ALU.sv}
+# Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+# Start time: 15:36:51 on Dec 09,2016
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/chaos_000/Dropbox/CSE141L/cse141l/modules" C:/Users/chaos_000/Dropbox/CSE141L/cse141l/modules/ALU.sv 
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+# End time: 15:36:51 on Dec 09,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/chaos_000/Dropbox/CSE141L/cse141l/modules {C:/Users/chaos_000/Dropbox/CSE141L/cse141l/modules/write_data_switch.sv}
+# Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+# Start time: 15:36:51 on Dec 09,2016
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/chaos_000/Dropbox/CSE141L/cse141l/modules" C:/Users/chaos_000/Dropbox/CSE141L/cse141l/modules/write_data_switch.sv 
+# -- Compiling module WriteDataSwitch
+# 
+# Top level modules:
+# 	WriteDataSwitch
+# End time: 15:36:51 on Dec 09,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/chaos_000/Dropbox/CSE141L/cse141l/modules {C:/Users/chaos_000/Dropbox/CSE141L/cse141l/modules/control.sv}
+# Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+# Start time: 15:36:51 on Dec 09,2016
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/chaos_000/Dropbox/CSE141L/cse141l/modules" C:/Users/chaos_000/Dropbox/CSE141L/cse141l/modules/control.sv 
+# -- Compiling module Control
+# 
+# Top level modules:
+# 	Control
+# End time: 15:36:51 on Dec 09,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/chaos_000/Dropbox/CSE141L/cse141l/modules {C:/Users/chaos_000/Dropbox/CSE141L/cse141l/modules/instruction_ROM.sv}
+# Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+# Start time: 15:36:51 on Dec 09,2016
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/chaos_000/Dropbox/CSE141L/cse141l/modules" C:/Users/chaos_000/Dropbox/CSE141L/cse141l/modules/instruction_ROM.sv 
+# -- Compiling module instruction_ROM
+# 
+# Top level modules:
+# 	instruction_ROM
+# End time: 15:36:51 on Dec 09,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/chaos_000/Dropbox/CSE141L/cse141l/modules {C:/Users/chaos_000/Dropbox/CSE141L/cse141l/modules/reg_file.sv}
+# Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+# Start time: 15:36:51 on Dec 09,2016
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/chaos_000/Dropbox/CSE141L/cse141l/modules" C:/Users/chaos_000/Dropbox/CSE141L/cse141l/modules/reg_file.sv 
+# -- Compiling module reg_file
+# 
+# Top level modules:
+# 	reg_file
+# End time: 15:36:51 on Dec 09,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/chaos_000/Dropbox/CSE141L/cse141l/modules {C:/Users/chaos_000/Dropbox/CSE141L/cse141l/modules/data_memory.sv}
+# Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+# Start time: 15:36:51 on Dec 09,2016
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/chaos_000/Dropbox/CSE141L/cse141l/modules" C:/Users/chaos_000/Dropbox/CSE141L/cse141l/modules/data_memory.sv 
+# -- Compiling module data_memory
+# 
+# Top level modules:
+# 	data_memory
+# End time: 15:36:51 on Dec 09,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vlog -reportprogress 300 -work work C:/Users/chaos_000/Dropbox/CSE141L/cse141l/modules/ALU.sv
+# Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+# Start time: 15:37:37 on Dec 09,2016
+# vlog -reportprogress 300 -work work C:/Users/chaos_000/Dropbox/CSE141L/cse141l/modules/ALU.sv 
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+# End time: 15:37:37 on Dec 09,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/chaos_000/Dropbox/CSE141L/cse141l/modules/control.sv
+# Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+# Start time: 15:37:37 on Dec 09,2016
+# vlog -reportprogress 300 -work work C:/Users/chaos_000/Dropbox/CSE141L/cse141l/modules/control.sv 
+# -- Compiling module Control
+# 
+# Top level modules:
+# 	Control
+# End time: 15:37:37 on Dec 09,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/chaos_000/Dropbox/CSE141L/cse141l/modules/data_memory.sv
+# Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+# Start time: 15:37:37 on Dec 09,2016
+# vlog -reportprogress 300 -work work C:/Users/chaos_000/Dropbox/CSE141L/cse141l/modules/data_memory.sv 
+# -- Compiling module data_memory
+# 
+# Top level modules:
+# 	data_memory
+# End time: 15:37:37 on Dec 09,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/chaos_000/Dropbox/CSE141L/cse141l/modules/fetch.sv
+# Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+# Start time: 15:37:37 on Dec 09,2016
+# vlog -reportprogress 300 -work work C:/Users/chaos_000/Dropbox/CSE141L/cse141l/modules/fetch.sv 
+# -- Compiling module fetch
+# 
+# Top level modules:
+# 	fetch
+# End time: 15:37:38 on Dec 09,2016, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/chaos_000/Dropbox/CSE141L/cse141l/modules/instruction_ROM.sv
+# Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+# Start time: 15:37:38 on Dec 09,2016
+# vlog -reportprogress 300 -work work C:/Users/chaos_000/Dropbox/CSE141L/cse141l/modules/instruction_ROM.sv 
+# -- Compiling module instruction_ROM
+# 
+# Top level modules:
+# 	instruction_ROM
+# End time: 15:37:38 on Dec 09,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/chaos_000/Dropbox/CSE141L/cse141l/modules/PC.sv
+# Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+# Start time: 15:37:38 on Dec 09,2016
+# vlog -reportprogress 300 -work work C:/Users/chaos_000/Dropbox/CSE141L/cse141l/modules/PC.sv 
+# -- Compiling module PC
+# 
+# Top level modules:
+# 	PC
+# End time: 15:37:38 on Dec 09,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/chaos_000/Dropbox/CSE141L/cse141l/modules/reg_file.sv
+# Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+# Start time: 15:37:38 on Dec 09,2016
+# vlog -reportprogress 300 -work work C:/Users/chaos_000/Dropbox/CSE141L/cse141l/modules/reg_file.sv 
+# -- Compiling module reg_file
+# 
+# Top level modules:
+# 	reg_file
+# End time: 15:37:38 on Dec 09,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/chaos_000/Dropbox/CSE141L/cse141l/modules/write_data_switch.sv
+# Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+# Start time: 15:37:38 on Dec 09,2016
+# vlog -reportprogress 300 -work work C:/Users/chaos_000/Dropbox/CSE141L/cse141l/modules/write_data_switch.sv 
+# -- Compiling module WriteDataSwitch
+# 
+# Top level modules:
+# 	WriteDataSwitch
+# End time: 15:37:38 on Dec 09,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/chaos_000/Dropbox/CSE141L/cse141l/top.sv
+# Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+# Start time: 15:37:40 on Dec 09,2016
+# vlog -reportprogress 300 -work work C:/Users/chaos_000/Dropbox/CSE141L/cse141l/top.sv 
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# End time: 15:37:40 on Dec 09,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/chaos_000/Dropbox/CSE141L/cse141l/programs/closest_pair.sv
+# Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+# Start time: 15:37:43 on Dec 09,2016
+# vlog -reportprogress 300 -work work C:/Users/chaos_000/Dropbox/CSE141L/cse141l/programs/closest_pair.sv 
+# -- Compiling module top_tb_closest_pair
+# 
+# Top level modules:
+# 	top_tb_closest_pair
+# End time: 15:37:43 on Dec 09,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim rtl_work.top_tb_closest_pair
+# vsim rtl_work.top_tb_closest_pair 
+# Start time: 15:37:50 on Dec 09,2016
+# Loading sv_std.std
+# Loading rtl_work.top_tb_closest_pair
+# Loading rtl_work.top
+# Loading rtl_work.PC
+# Loading rtl_work.fetch
+# Loading rtl_work.instruction_ROM
+# Loading rtl_work.reg_file
+# Loading rtl_work.ALU
+# Loading rtl_work.data_memory
+# Loading rtl_work.WriteDataSwitch
+# Loading rtl_work.Control
+add wave sim:/top_tb_closest_pair/*
+run -all
+# ** Warning: (vsim-7) Failed to open readmem file "default.mem" in read mode.
+# 
+# No such file or directory. (errno = ENOENT)    : C:/Users/chaos_000/Dropbox/CSE141L/cse141l/modules/data_memory.sv(31)
+#    Time: 100 ns  Iteration: 1  Instance: /top_tb_closest_pair/uut/data_mem
+restart
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Warning: (vsim-7) Failed to open readmem file "default.mem" in read mode.
+# 
+# No such file or directory. (errno = ENOENT)    : C:/Users/chaos_000/Dropbox/CSE141L/cse141l/modules/data_memory.sv(31)
+#    Time: 100 ns  Iteration: 1  Instance: /top_tb_closest_pair/uut/data_mem
+vlog -reportprogress 300 -work work C:/Users/chaos_000/Dropbox/CSE141L/cse141l/modules/data_memory.sv
+# Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+# Start time: 15:43:11 on Dec 09,2016
+# vlog -reportprogress 300 -work work C:/Users/chaos_000/Dropbox/CSE141L/cse141l/modules/data_memory.sv 
+# -- Compiling module data_memory
+# 
+# Top level modules:
+# 	data_memory
+# End time: 15:43:11 on Dec 09,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/chaos_000/Dropbox/CSE141L/cse141l/modules/data_memory.sv
+# Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+# Start time: 15:43:14 on Dec 09,2016
+# vlog -reportprogress 300 -work work C:/Users/chaos_000/Dropbox/CSE141L/cse141l/modules/data_memory.sv 
+# -- Compiling module data_memory
+# 
+# Top level modules:
+# 	data_memory
+# End time: 15:43:14 on Dec 09,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# Loading rtl_work.data_memory
+add wave -position end  sim:/top_tb_closest_pair/uut/data_mem/mem
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Warning: (vsim-7) Failed to open readmem file "default.mem" in read mode.
+# 
+# No such file or directory. (errno = ENOENT)    : C:/Users/chaos_000/Dropbox/CSE141L/cse141l/modules/data_memory.sv(31)
+#    Time: 100 ns  Iteration: 1  Instance: /top_tb_closest_pair/uut/data_mem
+run -continue
+run -continue
+run -continue
+run -continue
+run
+restart
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Warning: (vsim-7) Failed to open readmem file "default.mem" in read mode.
+# 
+# No such file or directory. (errno = ENOENT)    : C:/Users/chaos_000/Dropbox/CSE141L/cse141l/modules/data_memory.sv(31)
+#    Time: 100 ns  Iteration: 1  Instance: /top_tb_closest_pair/uut/data_mem
+restart
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Warning: (vsim-7) Failed to open readmem file "default.mem" in read mode.
+# 
+# No such file or directory. (errno = ENOENT)    : C:/Users/chaos_000/Dropbox/CSE141L/cse141l/modules/data_memory.sv(31)
+#    Time: 100 ns  Iteration: 1  Instance: /top_tb_closest_pair/uut/data_mem
+restart
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+restart
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+restart
+add wave -position end  sim:/top_tb_closest_pair/uut/data_mem/mem[127]
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+vlog -reportprogress 300 -work work C:/Users/chaos_000/Dropbox/CSE141L/cse141l/programs/product.sv
+# Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+# Start time: 17:26:01 on Dec 09,2016
+# vlog -reportprogress 300 -work work C:/Users/chaos_000/Dropbox/CSE141L/cse141l/programs/product.sv 
+# -- Compiling module top_tb_product
+# 
+# Top level modules:
+# 	top_tb_product
+# End time: 17:26:01 on Dec 09,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/chaos_000/Dropbox/CSE141L/cse141l/programs/string_match.sv
+# Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+# Start time: 17:26:01 on Dec 09,2016
+# vlog -reportprogress 300 -work work C:/Users/chaos_000/Dropbox/CSE141L/cse141l/programs/string_match.sv 
+# -- Compiling module top_tb_string_match
+# 
+# Top level modules:
+# 	top_tb_string_match
+# End time: 17:26:01 on Dec 09,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim rtl_work.top_tb_product
+# End time: 17:26:06 on Dec 09,2016, Elapsed time: 1:48:16
+# Errors: 0, Warnings: 5
+# vsim rtl_work.top_tb_product 
+# Start time: 17:26:06 on Dec 09,2016
+# Loading sv_std.std
+# Loading rtl_work.top_tb_product
+# Loading rtl_work.top
+# Loading rtl_work.PC
+# Loading rtl_work.fetch
+# Loading rtl_work.instruction_ROM
+# Loading rtl_work.reg_file
+# Loading rtl_work.ALU
+# Loading rtl_work.data_memory
+# Loading rtl_work.WriteDataSwitch
+# Loading rtl_work.Control
+add wave -position end  sim:/top_tb_product/clock
+add wave -position end  sim:/top_tb_product/done
+add wave -position end  sim:/top_tb_product/uut/data_mem/mem[4]
+add wave -position end  sim:/top_tb_product/uut/data_mem/mem[5]
+run
+vsim rtl_work.top_tb_string_match
+# End time: 17:29:20 on Dec 09,2016, Elapsed time: 0:03:14
+# Errors: 0, Warnings: 0
+# vsim rtl_work.top_tb_string_match 
+# Start time: 17:29:20 on Dec 09,2016
+# Loading sv_std.std
+# Loading rtl_work.top_tb_string_match
+# Loading rtl_work.top
+# Loading rtl_work.PC
+# Loading rtl_work.fetch
+# Loading rtl_work.instruction_ROM
+# Loading rtl_work.reg_file
+# Loading rtl_work.ALU
+# Loading rtl_work.data_memory
+# Loading rtl_work.WriteDataSwitch
+# Loading rtl_work.Control
+add wave -position end  sim:/top_tb_string_match/clock
+add wave -position end  sim:/top_tb_string_match/done
+add wave -position end  sim:/top_tb_string_match/uut/data_mem/mem[7]
+run
